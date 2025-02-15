@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void push();
+void display();
+
+int a[100], top = -1;
+
+int main() {
+    int x;
+    while (1) {
+        printf("\n0 or CTRL-C to Exit ");
+        printf("\n1. Push");
+        printf("\n5. Display");
+        printf("\nEnter your choice? \n");
+        scanf("%d", &x);
+        switch (x) {
+            case 0:
+                return 0;
+            case 1:
+                push();
+                break;
+            case 5:
+                display();
+                break;
+            default:
+                printf("\nInvalid choice,\nPlease try again.\n");
+        }
+    }
+    return 0;
+}
